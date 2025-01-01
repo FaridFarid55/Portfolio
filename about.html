@@ -17,17 +17,105 @@
    </head>
    <body>
       <!--==================== HEADER ====================-->
-      
+      <header class="header header-pages" id="header">
+         <nav class="nav container">
+         <a href="index.html" class="nav__logo">Farid</a>
+
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+
+               <li class="nav__item">
+                  <a href="index.html" class="nav__link">Home</a>
+               </li>
+               
+               <li class="nav__item">
+                  <a href="work.html" class="nav__link">Projects</a>
+               </li>
+
+               
+               <li class="nav__item">
+                  <a href="about.html" class="nav__link">About Me</a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="contact.html " class="button">Contact Me</a>
+               </li>
+            </ul>
+
+            <!-- Close Button -->
+              <div class="nav__close" id="nav-close">
+               <i class="ri-close-line"></i>
+              </div>
+         </div>
+
+         <div class="nav__actions">
+           <!-- theme button -->
+           <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+           <!-- toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-apps-line"></i>
+              </div>
+
+
+         </div>
+      </nav>
+      </header>
 
       <!--==================== MAIN ====================-->
       <main class="main">
          <!--==================== ABOUT ====================-->
          <section class="about section">
-            
+            <h2 class="section__title">
+               My Personal <br> 
+              Information
+            </h2>
+
+            <div class="about__container about__page container grid">
+               <div class="about__perfil perfil">
+                  <div class="perfil__content">
+                  <img src="assets/img/Farid-Logo-2.png" alt="image" class="perfil__img">
+                  </div>
+               </div>
+
+               <div class="about__content grid">
+                  <div class="about__data grid">
+                     <div class="about__info grid">
+                        <h1 class="about__name">Farid Farid</h1>
+                        <h2 class="about__profession"> Software Engineering & Web Developer </h2>
+                        <p class="about__description">
+                           Hi, I'm <b>Farid</b>, a passionate <b>Software Engineer</b> and <b>Web Developer</b> focused on creating innovative, user-friendly web applications. I specialize in both <b>front-end</b> and <b>back-end</b> development, using the latest technologies to deliver <b>seamless digital experiences</b>.
+
+                           I love solving problems, staying ahead of tech trends, and collaborating with others to turn ideas into <b>real-world solutions</b>. Always eager to grow and challenge myself, I’m excited to connect and build something great together
+                        </p>
+                     </div>
+
+                     <a href="contact.html" class="about__button button">Contact Me</a>
+                  </div>
+
+                  <div class="about__skills">
+                     <h3 class="about__skills-title">My Skills Are</h3>
+
+                     <div class="about__skills-content grid">
+                        <img src="assets/img/about-html.svg" alt="image" class="about__skills-img">
+                        <img src="assets/img/about-javascript.svg" alt="image" class="about__skills-img">
+                        <img src="assets/img/about-git.svg" alt="image" class="about__skills-img">
+                        <img src="assets/img/github-icon-1.svg" alt="image" class="about__skills-img">
+                        <img src="assets/img/about-sass.svg" alt="image" class="about__skills-img">
+                        <img src="assets/img/c-sharp.svg" alt="image" class="about__skills-img">
+                        <img src="assets/img/aspnet.svg" alt="image" class="about__skills-img">
+                        <img src="assets/img/sql.svg" alt="image" class="about__skills-img">
+                        <img src="assets/img/problem-solving-fix-offer-solution-solve.svg" alt="image" class="about__skills-img">
+                     </div>
+                  </div>
+               </div>
+            </div>
          </section>
       </main>
 
-      <!--==================== FOOTER ====================-->
+     <!--==================== FOOTER ====================-->
+     <div id="footer-container"></div>
+
       
 
       <!--=============== MAIN JS ===============-->

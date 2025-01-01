@@ -1,14 +1,14 @@
 ========== HEADER ==========
 .nav__logo
-Liz
+Farid
 
 .nav__link
-Home - About Me - Portfolio - Contact Me
+Home - About Me - Projects - Contact Me
 
 
 ========== HOME ==========
 .home__name
-Liz Delz
+Farid Farid
 
 .home__profession
 Web & Visual Designer
@@ -17,6 +17,7 @@ Web & Visual Designer
 https://github.com/
 https://www.linkedin.com/
 https://dribbble.com/
+
 
 .home__button
 Download CV
