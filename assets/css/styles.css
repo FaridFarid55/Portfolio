@@ -53,17 +53,6 @@
 }
 
 /*========== Responsive typography ==========*/
-@media screen and (min-width: 1150px) {
-  :root {
-    --biggest-font-size: 4.5rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1.125rem;
-    --small-font-size: 0.875rem;
-    --smaller-font-size: 0.813rem;
-  }
-}
 
 /*=============== BASE ===============*/
 * {
@@ -162,6 +151,14 @@ body.dark-theme {
 .dark-theme .scrollup {
   background-color: var(--container-color);
   box-shadow: 0 12px 24px var(--shadow-color);
+}
+
+/*========== 
+  Change the color of the social 
+  icons in the footer
+==========*/
+.dark-theme .about__skills-img:hover {
+  background-color: var(--first-color);
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -825,6 +822,15 @@ body.dark-theme {
 }
 /* For large devices */
 @media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1.125rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
   .container {
     margin-inline: auto;
   }
@@ -832,7 +838,7 @@ body.dark-theme {
     padding-block: 7rem 2rem;
   }
   .section__title {
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
   }
   .nav {
     height: calc(var(--header-height) + 2rem);
@@ -846,6 +852,7 @@ body.dark-theme {
     margin-left: auto;
   }
   .nav__list {
+    font-size: 1rem;
     flex-direction: row;
     align-items: center;
     column-gap: 3rem;
@@ -854,17 +861,20 @@ body.dark-theme {
     color: var(--title-color);
   }
   .perfil {
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     border-width: 15px;
   }
   .perfil__content {
-    width: 360px;
-    height: 360px;
+    width: 320px;
+    height: 320px;
     border-width: 20px;
   }
   .perfil__img {
-    width: 300px;
+    width: 280px;
+  }
+  .home__name {
+    font-size: 3rem;
   }
   .home__rectangle {
     width: 30vw;
@@ -872,9 +882,9 @@ body.dark-theme {
   }
   /*  INFO : display: flex;  */
   .home__container {
-    display: flex;
+    /* display: flex; */
     position: relative;
-    /* grid-template-columns: 500px 300px; */
+    grid-template-columns: 500px 300px;
     align-items: center;
     column-gap: 4rem;
     padding-block: 3.5rem 8rem;
