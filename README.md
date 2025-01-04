@@ -47,13 +47,13 @@ This portfolio website serves as a platform to showcase my work, passion, and gr
 
 ### **Preview**
 
-![preview img](/Farid-Logo-2.png)
+![preview img](/assets/img/README.png)
 
 ---
 
-### **Find Me Online**
+### **Connect with Me**
 
 Stay connected and explore more about my journey:
 
 - **GitHub**: [FaridFarid55](#)
-- **LinkedIn**: [FaridFarid55](#)
+- **LinkedIn**: [Farid Farid](https://www.linkedin.com/in/farid-farid-5a2478276)
