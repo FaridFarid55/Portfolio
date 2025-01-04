@@ -61,11 +61,3 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
-
-// footer
-fetch("Shear/footer.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("footer-container").innerHTML = data;
-  })
-  .catch((error) => console.error("Error loading footer:", error));
