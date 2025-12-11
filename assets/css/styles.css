@@ -157,11 +157,11 @@ body.dark-theme {
   Change the color of the social 
   icons in the footer
 ==========*/
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .dark-theme .about__skills-img {
     filter: invert(1) contrast(10) brightness(1.2);
   }
-}
+} */
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -425,14 +425,10 @@ body.dark-theme {
 }
 /*=============== SERVICES ===============*/
 .services__container {
-  row-gap: 2rem;
+ grid-template-columns: repeat(3, 345px);
 }
 .services__card {
-  background-color: var(--container-color);
-  padding: 3.5rem 1.5rem;
-  box-shadow: 0px 12px 24px var(--shadow-color);
-  text-align: center;
-  transition: background-color 0.4s;
+padding-block: 4.5rem;
 }
 .services__icon {
   display: inline-block;
@@ -467,10 +463,10 @@ body.dark-theme {
   transition: opacity 0.4s, visibility 0.4s;
 }
 .services__modal-content {
-  max-height: 420px;
+  max-height: 480px;
   position: relative;
   background-color: var(--container-color);
-  padding: 3.5rem 1.5rem;
+  padding: 5.5rem 2rem;
   border-bottom: 6px solid var(--first-color);
   overflow: auto;
 }
@@ -931,7 +927,7 @@ body.dark-theme {
   }
   /* INFO: WITH GRID COUNT services */
   .services__container {
-    grid-template-columns: repeat(2, 345px);
+    grid-template-columns: repeat(3, 345px);
   }
   .services__card {
     padding-block: 4.5rem;
