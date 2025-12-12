@@ -747,16 +747,17 @@ padding-block: 4.5rem;
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 320px) {
   .container {
     margin-inline: 1rem;
   }
 
   .services__container {
-    grid-template-columns: 1fr;
-    max-width: 320px;
-    margin: 0 auto;
-    justify-items: center; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    gap: 1.5rem;
+    justify-content: center; 
+    justify-items: center;   
   }
 
   .services__modal-content {
@@ -779,12 +780,13 @@ padding-block: 4.5rem;
   }
 }
 
+
 /* For medium devices */
 
 /* For large devices */
 @media screen and (min-width: 576px) {
   .services__container {
-    grid-template-columns: repeat(2, 300px); /* صفين */
+    grid-template-columns: repeat(2, 300px);
     justify-content: center;
     gap: 1.5rem;
   }
