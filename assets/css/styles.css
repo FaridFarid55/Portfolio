@@ -753,12 +753,16 @@ padding-block: 4.5rem;
   }
 
   .services__container {
-    grid-template-columns: 320px;
-    justify-content: center;
+    grid-template-columns: 1fr; /* ياخد عرض الشاشة بالكامل */
+    max-width: 320px;
+    margin: 0 auto;
   }
+
   .services__modal-content {
-    width: 400px;
+    width: 90%;
+    max-width: 380px;
   }
+
   .services__modal {
     padding-inline: 0.5rem;
   }
@@ -779,15 +783,17 @@ padding-block: 4.5rem;
 /* For large devices */
 @media screen and (min-width: 576px) {
   .services__container {
-    grid-template-columns: 320px;
+    grid-template-columns: repeat(2, 300px); /* صفين */
     justify-content: center;
+    gap: 1.5rem;
   }
+
   .services__modal-content {
     width: 400px;
   }
 
   .work__container {
-    grid-template-columns: 350px;
+    grid-template-columns: repeat(2, 350px);
     justify-content: center;
   }
 
@@ -795,6 +801,7 @@ padding-block: 4.5rem;
     grid-template-columns: 400px;
     justify-content: center;
   }
+
   .header-time {
     top: 16px;
     left: 6px;
