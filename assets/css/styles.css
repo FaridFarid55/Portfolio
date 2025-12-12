@@ -752,6 +752,13 @@ padding-block: 4.5rem;
     margin-inline: 1rem;
   }
 
+  .services__container {
+    grid-template-columns: 320px;
+    justify-content: center;
+  }
+  .services__modal-content {
+    width: 400px;
+  }
   .services__modal {
     padding-inline: 0.5rem;
   }
