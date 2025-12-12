@@ -747,7 +747,7 @@ padding-block: 4.5rem;
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 400px) {
   .container {
     margin-inline: 1rem;
   }
