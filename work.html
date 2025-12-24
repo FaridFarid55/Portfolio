@@ -8,10 +8,10 @@
     <link rel="shortcut icon" href="assets/img/Logo2.png" type="image/x-icon" />
 
     <!--=============== REMIXICONS ===============-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
-    />
+<link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -73,115 +73,52 @@
     <!--==================== MAIN ====================-->
     <main class="main">
       <!--==================== WORK ====================-->
-      <section class="work section">
-        <h2 class="section__title">
-          My Most <br />
-          Recent Works
-        </h2>
+    <section class="work section">
+      <h2 class="section__title">
+        My <br />
+        Projects
+      </h2>
 
-        <div class="work__container container grid">
-          <!-- #1#=> work-1 -->
-          <article class="work__card">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener"
-              class="work__link"
-              title="View Project Details"
-            >
-              <img src="assets/img/work-1.png" alt="image" class="work__img" />
-              <i class="ri-arrow-right-circle-line work__icon"></i>
-            </a>
+      <div class="work__container container grid">
 
-            <h2 class="work__title">Creative Website</h2>
-            <span class="work__subtitle"> Website Design </span>
-          </article>
-          <!-- #2#=> work-2 -->
-          <article class="work__card">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener"
-              class="work__link"
-              title="View Project Details"
-            >
-              <img src="assets/img/work-2.png" alt="image" class="work__img" />
-              <i class="ri-arrow-right-circle-line work__icon"></i>
-            </a>
+        <!-- Project #1 -->
+        <article class="work__card">
+          <div class="work__link">
+            <img src="assets/img/work-1.png" alt="Digital Banking App" class="work__img" />
+          </div>
 
-            <h2 class="work__title">Creative Website</h2>
-            <span class="work__subtitle"> Website Design </span>
-          </article>
+          <h2 class="work__title">Digital Banking App</h2>
+          <span class="work__subtitle">Applications</span>
 
-          <!-- #3#=> work-3 -->
-          <article class="work__card">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener"
-              class="work__link"
-              title="View Project Details"
-            >
-              <img src="assets/img/work-3.png" alt="image" class="work__img" />
-              <i class="ri-arrow-right-circle-line work__icon"></i>
-            </a>
+          <p class="work__description">
+            A feature-rich digital banking app built with React and TailwindCSS.
+          </p>
 
-            <h2 class="work__title">Awesome App</h2>
-            <span class="work__subtitle"> App Design </span>
-          </article>
+          <button class="work__details-btn button" type="button">Details Project</button>
 
-          <!-- #4#=> work-4 -->
-          <article class="work__card">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener"
-              class="work__link"
-              title="View Project Details"
-            >
-              <img src="assets/img/work-4.png" alt="image" class="work__img" />
-              <i class="ri-arrow-right-circle-line work__icon"></i>
-            </a>
+          <!-- Modal -->
+          <div class="work__modal">
+            <div class="work__modal-content">
+              <i class="ri-close-line work__modal-close"></i>
 
-            <h2 class="work__title">Awesome App</h2>
-            <span class="work__subtitle"> App Design </span>
-          </article>
+              <h2 class="work__modal-title">Digital Banking App</h2>
 
-          <!-- #5#=> work-5 -->
-          <article class="work__card">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener"
-              class="work__link"
-              title="View Project Details"
-            >
-              <img src="assets/img/work-5.png" alt="image" class="work__img" />
-              <i class="ri-arrow-right-circle-line work__icon"></i>
-            </a>
+              <ul class="work__modal-list grid">
+                <li class="work__modal-item">Built with React, TailwindCSS, TypeScript, Vite.</li>
+                <li class="work__modal-item">Mobile-first UI with smooth animations.</li>
+                <li class="work__modal-item">Clean architecture and reusable components.</li>
+                <li class="work__modal-item">
+                  Links:
+                  <a href="https://github.com" target="_blank">GitHub</a> /
+                  <a href="https://example.com" target="_blank">Live</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
 
-            <h2 class="work__title">Interface Design</h2>
-            <span class="work__subtitle"> UI/UX </span>
-          </article>
-
-          <!-- #6#=> work-6 -->
-          <article class="work__card">
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener"
-              class="work__link"
-              title="View Project Details"
-            >
-              <img src="assets/img/work-6.png" alt="image" class="work__img" />
-              <i class="ri-arrow-right-circle-line work__icon"></i>
-            </a>
-
-            <h2 class="work__title">Interface Design</h2>
-            <span class="work__subtitle"> UI/UX </span>
-          </article>
-        </div>
-      </section>
+      </div>
+    </section>
     </main>
 
     <!--==================== FOOTER ====================-->
@@ -234,7 +171,10 @@
     <a href="#" class="scrollup" id="scroll-up" title="Scroll to top">
       <i class="ri-arrow-up-line"></i>
     </a>
+
+
     <!--=============== MAIN JS ===============-->
+    <script src="assets/js/work.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

@@ -506,20 +506,147 @@ padding-block: 4.5rem;
 }
 
 /*=============== WORK ===============*/
-.work__container {
+/*=============== PROJECTS (WORK) ===============*/
+.work__container{
+  grid-template-columns: repeat(3, 345px);
+  justify-content: center;
+  gap: 2rem;
+}
+
+.work__card{
+  background-color: var(--container-color);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+.work__link{
+  margin-bottom: 1.5rem;
+}
+
+.work__img{
+  width: 100%;
+  border-radius: .75rem;
+  display: block;
+}
+
+.work__title{
+  font-size: var(--h2-font-size);
+  margin-bottom: .5rem;
+}
+
+.work__subtitle{
+  display: inline-block;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  margin-bottom: 1rem;
+}
+
+.work__description{
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+
+.work__details-btn{
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  border-radius: 30px;
+}
+
+/*=============== WORK MODAL (services) ===============*/
+.work__modal{
+  position: fixed;
+  inset: 0;
+  background-color: hsla(var(--hue), 90%, 30%, 0.3);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  z-index: var(--z-modal);
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+.work__modal-content{
+  max-height: 480px;
+  position: relative;
+  background-color: var(--container-color);
+  padding: 5.5rem 2rem;
+  border-bottom: 6px solid var(--first-color);
+  overflow: auto;
+  border-radius: 1rem;
+}
+
+.work__modal-content::-webkit-scrollbar{
+  width: 0.6rem;
+}
+
+.work__modal-content::-webkit-scrollbar-thumb{
+  background-color: var(--text-color-light);
+}
+
+.work__modal-title{
+  font-size: var(--h2-font-size);
+  margin-bottom: 2.5rem;
+}
+
+.work__modal-list{
+  margin-left: 1rem;
+}
+
+.work__modal-item{
+  text-align: initial;
+  list-style: square;
+  color: var(--text-color);
+}
+
+.work__modal-item::marker{
+  color: var(--first-color);
+}
+
+.work__modal-close{
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+/* Active modal */
+.active-modal{
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive */
+@media (max-width: 1100px){
+  .work__container{ grid-template-columns: repeat(2, 345px); }
+}
+@media (max-width: 768px){
+  .work__container{ grid-template-columns: 1fr; }
+}
+
+
+/*=============== certificate ===============*/
+.certificate__container {
   row-gap: 2rem;
 }
-.work__link {
+.certificate__link {
   display: inline-block;
   position: relative;
   overflow: hidden;
   margin-bottom: 1rem;
 }
-.work__img {
+.certificate__img {
   filter: grayscale(1);
   transition: filter 0.5s, transform 0.5s;
 }
-.work__icon {
+.certificate__icon {
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
@@ -527,18 +654,18 @@ padding-block: 4.5rem;
   color: var(--first-color);
   transition: transform 0.4s;
 }
-.work__link:hover .work__img {
+.certificate__link:hover .certificate__img{
   transform: scale(1.1);
   filter: none;
 }
-.work__link:hover .work__icon {
+.certificate__link:hover .certificate__icon {
   transform: translate(0.5rem, -0.25rem) rotate(-30deg);
 }
-.work__title {
+.certificate__title {
   font-size: var(--h2-font-size);
   margin-bottom: 0.25rem;
 }
-.work__page {
+.certificate__page {
   padding-bottom: 4rem;
 }
 
@@ -804,7 +931,7 @@ padding-block: 4.5rem;
     width: 400px;
   }
 
-  .work__container {
+  .work__container ,.certificate__container {
     grid-template-columns: repeat(2, 350px);
     justify-content: center;
   }
@@ -825,7 +952,7 @@ padding-block: 4.5rem;
   .services__container {
     grid-template-columns: repeat(2, 320px);
   }
-  .work__container {
+  .work__container ,.certificate__container {
     grid-template-columns: repeat(2, 350px);
   }
   .testimonial__container {
@@ -965,7 +1092,7 @@ padding-block: 4.5rem;
   .services__modal-close {
     font-size: 2rem;
   }
-  .work__container {
+  .work__container,.certificate__container {
     grid-template-columns: repeat(3, 345px);
     row-gap: 4rem;
   }
