@@ -10,13 +10,17 @@ workButtons.forEach((btn, i) => {
 
 workCloses.forEach((close) => {
   close.addEventListener("click", () => {
-    workModals.forEach(m => m.classList.remove("active-modal"));
+    workModals.forEach(m => {
+      m.classList.remove("active-modal");
+    });
   });
 });
 
-
-workModals.forEach((modal) => {
-  modal.addEventListener("click", (e) => {
-    if(e.target === modal) modal.classList.remove("active-modal");
+// Close modal when clicking outside the content
+window.addEventListener("click", (e) => {
+  workModals.forEach((modal) => {
+    if (e.target === modal) {
+      modal.classList.remove("active-modal");
+    }
   });
 });

@@ -517,7 +517,31 @@ padding-block: 4.5rem;
   background-color: var(--container-color);
   padding: 2.5rem 2rem;
   border-radius: 1rem;
-  box-shadow: 0 8px 24px var(--shadow-color);
+  box-shadow: 0 5px 20px var(--shadow-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.work__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px 7px var(--first-color);
+  animation: burn 0.8s infinite alternate;
+}
+
+.work__card:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 30px 10px var(--first-color);
+}
+
+@keyframes burn {
+  0% {
+    box-shadow: 0 0 8px 3px var(--first-color);
+  }
+  100% {
+    box-shadow: 0 0 20px 10px var(--first-color);
+  }
 }
 
 .work__link{
