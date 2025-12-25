@@ -97,7 +97,7 @@
           <button class="work__details-btn button" type="button" data-modal="1">Details Project</button>
         </article>
 
-        <!-- Project #2 (مثال) -->
+        <!-- Project #2  -->
         <article class="work__card">
           <div class="work__link">
             <img src="assets/img/work-2.png" alt="Project 2" class="work__img" />
@@ -117,40 +117,128 @@
 
       <!-- ========== ALL MODALS ========== -->
       
-      <!-- Modal #1 -->
-          <div class="work__modal" data-modal="1">
-            <div class="work__modal-content">
-              <i class="ri-close-line work__modal-close"></i>
+          <!-- Modal #1 -->
+        <div class="work__modal" data-modal="1">
+          <div class="work__modal-content">
+            <!-- Close Button -->
+            <i class="ri-close-line work__modal-close"></i>
 
-              <h2 class="work__modal-title">Digital Banking App</h2>
+            <!-- Title -->
+            <h2 class="work__modal-title">Digital Banking App</h2>
 
-              <ul class="work__modal-list grid">
-                <li class="work__modal-item">Built with React, TailwindCSS, TypeScript, Vite.</li>
-                <li class="work__modal-item">Mobile-first UI with smooth animations.</li>
-                <li class="work__modal-item">Clean architecture and reusable components.</li>
-                <li class="work__modal-item">
-                  Links:
-                  <a href="https://github.com" target="_blank">GitHub</a> /
-                  <a href="https://example.com" target="_blank">Live</a>
-                </li>
-              </ul>
+            <!-- Main Image -->
+            <div class="work__modal-gallery">
+              <img src="assets/img/work-1.png" alt="Digital Banking App" class="work__modal-img-main" id="mainImg-1">
+              
+              <!-- Thumbnails -->
+              <div class="work__modal-thumbnails">
+                <img src="assets/img/work-1.png" alt="Screenshot 1" class="work__modal-thumb active" onclick="changeImage(1, this)">
+                <img src="assets/img/work-1-2.png" alt="Screenshot 2" class="work__modal-thumb" onclick="changeImage(1, this)">
+                <img src="assets/img/work-1-3.png" alt="Screenshot 3" class="work__modal-thumb" onclick="changeImage(1, this)">
+                <img src="assets/img/work-1-4.png" alt="Screenshot 4" class="work__modal-thumb" onclick="changeImage(1, this)">
+              </div>
+            </div>
+
+            <!-- Category -->
+            <span class="work__modal-category">APPLICATIONS</span>
+
+            <!-- Description -->
+            <p class="work__modal-description">
+              A feature-rich digital banking app built with React and TailwindCSS, 
+              integrating seamless animations via Framer Motion. Designed with a 
+              mobile-first approach and a modular component system powered by 
+              TypeScript and Vite.
+            </p>
+
+            <!-- Technologies -->
+            <div class="work__modal-tech">
+              <h4 class="work__modal-tech-title">Technologies Used:</h4>
+              <div class="work__modal-tech-icons">
+                <div class="work__modal-tech-item" title="React">
+                  <i class="ri-reactjs-line"></i>
+                </div>
+                <div class="work__modal-tech-item" title="TailwindCSS">
+                  <svg viewBox="0 0 24 24" class="work__modal-tech-svg">
+                    <path fill="currentColor" d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/>
+                  </svg>
+                </div>
+                <div class="work__modal-tech-item" title="TypeScript">
+                  <span class="work__modal-tech-text">TS</span>
+                </div>
+                <div class="work__modal-tech-item" title="Vite">
+                  <svg viewBox="0 0 24 24" class="work__modal-tech-svg">
+                    <path fill="currentColor" d="M12.001 2L1.5 4.5l1.768 14.776L12 22l8.732-2.724L22.5 4.5 12.001 2zM18.26 7.5l-6.26 11-6.26-11h3.13l3.13 5.5 3.13-5.5h3.13z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="work__modal-footer">
+              <div class="work__modal-links">
+                <a href="https://github.com" target="_blank" class="work__modal-link" title="GitHub">
+                  <i class="ri-github-fill"></i>
+                </a>
+                <a href="https://example.com" target="_blank" class="work__modal-link" title="Live Demo">
+                  <i class="ri-global-line"></i>
+                </a>
+              </div>
+              <button class="work__modal-close-btn" type="button">Close</button>
+            </div>
+
+          </div>
+        </div>
+
+      <!-- Modal #2 -->
+      <div class="work__modal" data-modal="2">
+        <div class="work__modal-content">
+          <i class="ri-close-line work__modal-close"></i>
+
+          <h2 class="work__modal-title">E-Commerce Dashboard</h2>
+
+          <div class="work__modal-gallery">
+            <img src="assets/img/work-2.png" alt="E-Commerce" class="work__modal-img-main" id="mainImg-2">
+            <div class="work__modal-thumbnails">
+              <img src="assets/img/work-2.png" alt="Screenshot 1" class="work__modal-thumb active" onclick="changeImage(2, this)">
+              <img src="assets/img/work-2-2.png" alt="Screenshot 2" class="work__modal-thumb" onclick="changeImage(2, this)">
             </div>
           </div>
 
-      <!-- Modal #2 -->
-        <div class="work__modal" data-modal="2">
-          <div class="work__modal-content">
-            <i class="ri-close-line work__modal-close"></i>
+          <span class="work__modal-category">WEB DEVELOPMENT</span>
 
-            <h2 class="work__modal-title">Another Project</h2>
+          <p class="work__modal-description">
+            A comprehensive e-commerce dashboard with analytics, inventory management, 
+            and real-time sales tracking. Built with modern technologies.
+          </p>
 
-            <ul class="work__modal-list grid">
-              <li class="work__modal-item">Feature 1</li>
-              <li class="work__modal-item">Feature 2</li>
-              <li class="work__modal-item">Feature 3</li>
-            </ul>
+          <div class="work__modal-tech">
+            <h4 class="work__modal-tech-title">Technologies Used:</h4>
+            <div class="work__modal-tech-icons">
+              <div class="work__modal-tech-item" title="HTML5">
+                <i class="ri-html5-fill"></i>
+              </div>
+              <div class="work__modal-tech-item" title="CSS3">
+                <i class="ri-css3-fill"></i>
+              </div>
+              <div class="work__modal-tech-item" title="JavaScript">
+                <i class="ri-javascript-fill"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="work__modal-footer">
+            <div class="work__modal-links">
+              <a href="https://github.com" target="_blank" class="work__modal-link" title="GitHub">
+                <i class="ri-github-fill"></i>
+              </a>
+              <a href="https://example.com" target="_blank" class="work__modal-link" title="Live Demo">
+                <i class="ri-global-line"></i>
+              </a>
+            </div>
+            <button class="work__modal-close-btn" type="button">Close</button>
           </div>
         </div>
+      </div>
 
     </section>
  
