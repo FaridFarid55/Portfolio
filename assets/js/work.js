@@ -1,6 +1,6 @@
 const workButtons = document.querySelectorAll(".work__details-btn");
-const workModals  = document.querySelectorAll(".work__modal");
-const workCloses  = document.querySelectorAll(".work__modal-close");
+const workModals = document.querySelectorAll(".work__modal");
+const workCloses = document.querySelectorAll(".work__modal-close");
 
 workButtons.forEach((btn, i) => {
   btn.addEventListener("click", () => {
@@ -16,7 +16,6 @@ workCloses.forEach((close) => {
   });
 });
 
-// Close modal when clicking outside the content
 window.addEventListener("click", (e) => {
   workModals.forEach((modal) => {
     if (e.target === modal) {

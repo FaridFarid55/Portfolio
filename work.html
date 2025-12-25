@@ -72,7 +72,7 @@
 
     <!--==================== MAIN ====================-->
     <main class="main">
-      <!--==================== WORK ====================-->
+    <!--==================== WORK ====================-->
     <section class="work section">
       <h2 class="section__title">
         My <br />
@@ -94,10 +94,31 @@
             A feature-rich digital banking app built with React and TailwindCSS.
           </p>
 
-          <button class="work__details-btn button" type="button">Details Project</button>
+          <button class="work__details-btn button" type="button" data-modal="1">Details Project</button>
+        </article>
 
-          <!-- Modal -->
-          <div class="work__modal">
+        <!-- Project #2 (مثال) -->
+        <article class="work__card">
+          <div class="work__link">
+            <img src="assets/img/work-2.png" alt="Project 2" class="work__img" />
+          </div>
+
+          <h2 class="work__title">Another Project</h2>
+          <span class="work__subtitle">Web Development</span>
+
+          <p class="work__description">
+            Another amazing project description here.
+          </p>
+
+          <button class="work__details-btn button" type="button" data-modal="2">Details Project</button>
+        </article>
+
+      </div>
+
+      <!-- ========== ALL MODALS ========== -->
+      
+      <!-- Modal #1 -->
+          <div class="work__modal" data-modal="1">
             <div class="work__modal-content">
               <i class="ri-close-line work__modal-close"></i>
 
@@ -115,10 +136,24 @@
               </ul>
             </div>
           </div>
-        </article>
 
-      </div>
+      <!-- Modal #2 -->
+        <div class="work__modal" data-modal="2">
+          <div class="work__modal-content">
+            <i class="ri-close-line work__modal-close"></i>
+
+            <h2 class="work__modal-title">Another Project</h2>
+
+            <ul class="work__modal-list grid">
+              <li class="work__modal-item">Feature 1</li>
+              <li class="work__modal-item">Feature 2</li>
+              <li class="work__modal-item">Feature 3</li>
+            </ul>
+          </div>
+        </div>
+
     </section>
+ 
     </main>
 
     <!--==================== FOOTER ====================-->
