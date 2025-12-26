@@ -150,19 +150,46 @@
         </h2>
 
         <div class="services__container container grid">
-    <!-- #1# -->
-      <article class="services__card">
-        <i class="ri-code-s-slash-line services__icon"></i>
-        <h2 class="services__title">Software Engineering</h2>
-        <p class="services__description">
-          Passionate software engineer dedicated to crafting efficient,
-          scalable, and innovative solutions. I enjoy tackling challenges,
-          designing clean architectures, and delivering high-quality code
-          that makes a difference.
-        </p>
-        <button class="services__button button">Know More</button>
+          
+          <!-- #1# Software Engineering -->
+          <article class="services__card">
+            <i class="ri-code-s-slash-line services__icon"></i>
+            <h2 class="services__title">Software Engineering</h2>
+            <p class="services__description">
+              Passionate software engineer dedicated to crafting efficient,
+              scalable, and innovative solutions. I enjoy tackling challenges,
+              designing clean architectures, and delivering high-quality code
+              that makes a difference.
+            </p>
+            <button class="services__button button" data-modal="1">Know More</button>
+          </article>
 
-        <div class="services__modal">
+          <!-- #2# Web Development -->
+          <article class="services__card">
+            <i class="ri-pen-nib-line services__icon"></i>
+            <h2 class="services__title">Web Development</h2>
+            <p class="services__description">
+              Creative and detail-oriented web developer with expertise in building modern, user-friendly websites and applications. I specialize in both front-end and back-end development to deliver seamless user experiences.
+            </p>
+            <button class="services__button button" data-modal="2">Know More</button>
+          </article>
+
+          <!-- #3# Problem Solving -->
+          <article class="services__card">
+            <i class="ri-brain-line services__icon"></i>
+            <h2 class="services__title">Problem Solving</h2>
+            <p class="services__description">
+              Skilled in diagnosing complex issues, improving performance, and ensuring stable, efficient, and maintainable web applications. I enjoy dissecting problems, optimizing systems, and delivering clean, robust solutions.
+            </p>
+            <button class="services__button button" data-modal="3">Know More</button>
+          </article>
+
+        </div>
+
+        <!-- ========== ALL MODALS ========== -->
+        
+        <!-- Modal #1 - Software Engineering -->
+        <div class="services__modal" data-modal="1">
           <div class="services__modal-content">
             <i class="ri-close-line services__modal-close"></i>
             <h2 class="services__modal-title">Software Engineering</h2>
@@ -183,18 +210,9 @@
             </ul>
           </div>
         </div>
-      </article>
 
-    <!-- #2# -->
-      <article class="services__card">
-        <i class="ri-pen-nib-line services__icon"></i>
-        <h2 class="services__title">Web Development</h2>
-        <p class="services__description">
-          Creative and detail-oriented web developer with expertise in building modern, user-friendly websites and applications. I specialize in both front-end and back-end development to deliver seamless user experiences.
-        </p>
-        <button class="services__button button">Know More</button>
-
-        <div class="services__modal">
+        <!-- Modal #2 - Web Development -->
+        <div class="services__modal" data-modal="2">
           <div class="services__modal-content">
             <i class="ri-close-line services__modal-close"></i>
             <h2 class="services__modal-title">Web Development</h2>
@@ -215,20 +233,9 @@
             </ul>
           </div>
         </div>
-      </article>
 
-    <!-- #3# -->
-      <article class="services__card">
-        <i class="ri-brain-line services__icon"></i>
-        <h2 class="services__title">Problem Solving</h2>
-
-        <p class="services__description">
-          Skilled in diagnosing complex issues, improving performance, and ensuring stable, efficient, and maintainable web applications. I enjoy dissecting problems, optimizing systems, and delivering clean, robust solutions.
-        </p>
-
-        <button class="services__button button">Know More</button>
-
-        <div class="services__modal">
+        <!-- Modal #3 - Problem Solving -->
+        <div class="services__modal" data-modal="3">
           <div class="services__modal-content">
             <i class="ri-close-line services__modal-close"></i>
             <h2 class="services__modal-title">Problem Solving & Optimization</h2>
@@ -249,10 +256,7 @@
             </ul>
           </div>
         </div>
-      </article>
 
-
-        </div>
       </section>
 
       <!--==================== TESTIMONIAL ====================-->

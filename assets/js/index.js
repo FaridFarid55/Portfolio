@@ -1,45 +1,68 @@
 /*=============== SERVICES MODAL ===============*/
-const modal = document.querySelectorAll('.services__modal');
-const modalButton = document.querySelectorAll('.services__button');
-const modalClose = document.querySelectorAll('.services__modal-close');
+const servicesButtons = document.querySelectorAll('.services__button');
+const servicesModals = document.querySelectorAll('.services__modal');
+const servicesCloses = document.querySelectorAll('.services__modal-close');
 
-let activeModal = (modalClick) =>{
-    modal[modalClick].classList.add('active-modal')
+// Open modal by data-modal attribute
+servicesButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const modalId = btn.getAttribute('data-modal');
+    const modal = document.querySelector(`.services__modal[data-modal="${modalId}"]`);
+    if (modal) {
+      modal.classList.add('active-modal');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+});
+
+// Close modal - X button
+servicesCloses.forEach((close) => {
+  close.addEventListener('click', () => {
+    closeAllServicesModals();
+  });
+});
+
+// Close when clicking outside content
+window.addEventListener('click', (e) => {
+  servicesModals.forEach((modal) => {
+    if (e.target === modal) {
+      closeAllServicesModals();
+    }
+  });
+});
+
+// Close with Escape key
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeAllServicesModals();
+  }
+});
+
+function closeAllServicesModals() {
+  servicesModals.forEach((modal) => {
+    modal.classList.remove('active-modal');
+  });
+  document.body.style.overflow = '';
 }
-
-modalButton.forEach((modalButton, i) =>{
-    modalButton.addEventListener('click', () => {
-        activeModal(i)
-    });
-});
-
-modalClose.forEach((modalClose, i) =>{
-    modalClose.addEventListener('click', () => {
-       modal.forEach((modalRemove) => {
-        modalRemove.classList.remove('active-modal')
-       })
-    });
-});
 
 /*=============== SWIPER TESTIMONIAL ===============*/
 const swiperTestimonial = new Swiper('.testimonial__swiper', {
-    loop: true,
-    spaceBetween: 32,
-    grabCursor: true,
+  loop: true,
+  spaceBetween: 32,
+  grabCursor: true,
 
-    pagination: {
-      el: '.swiper-pagination',
-      dynamicBullets: true,
-      clickable: true,
-    },
-  })
+  pagination: {
+    el: '.swiper-pagination',
+    dynamicBullets: true,
+    clickable: true,
+  },
+});
 
-/*=============== SHOW SCROLL UP ===============*/ 
-const scrollUp = () =>{
-	const scrollUp = document.getElementById('scroll-up')
-    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
-	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-						: scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
-
+/*=============== SHOW SCROLL UP ===============*/
+const scrollUp = () => {
+  const scrollUp = document.getElementById('scroll-up');
+  this.scrollY >= 350
+    ? scrollUp.classList.add('show-scroll')
+    : scrollUp.classList.remove('show-scroll');
+};
+window.addEventListener('scroll', scrollUp);
