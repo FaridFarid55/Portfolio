@@ -560,7 +560,7 @@ gap: 2rem;
 
 .work__card {
 background-color: var(--container-color);
-padding: 2.5rem 2rem;
+padding: 1.5rem 2rem;
 border-radius: 1rem;
 box-shadow: 0 5px 20px var(--shadow-color);
 transition: transform 0.3s, box-shadow 0.3s;
@@ -1105,8 +1105,12 @@ border-radius: 30px;
     margin-inline: 1rem;
   }
 
+  .work__container
+  {
+    grid-template-columns: repeat(1, 335px);
+  }
   .services__container {
-    width: 100%;
+    /* width: 100%; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
@@ -1179,7 +1183,7 @@ border-radius: 30px;
     grid-template-columns: repeat(2, 320px);
   }
   .work__container ,.certificate__container {
-    grid-template-columns: repeat(2, 350px);
+    grid-template-columns: repeat(2, 335px);
   }
   .testimonial__container {
     max-width: 700px;
